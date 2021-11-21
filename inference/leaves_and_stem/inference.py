@@ -31,20 +31,11 @@ predictor = DefaultPredictor(cfg)
 
 metadata = Metadata()
 metadata.set(thing_classes = list(label_to_idx_seg.keys()))
-
-def process_image(filename):
+for filename in input_folder.iterdir():
+    if filename.suffix != '.jpg' and filename.suffix != '.png' and filename.suffix != '.jpeg':
+        continue
     im = cv2.imread(str(filename))
     outputs = predictor(im)
-    # print(outputs['instances'].get_fields().keys())
-    # print(outputs['instances'].get_fields()['pred_boxes'])
-    data  = outputs['instances'].get_fields()
-    for box, score, classz, mask in zip(data['pred_boxes'], data['scores'], data['pred_classes'], data['pred_masks']):
-      print(box.shape)
-      print(score)
-      print(classz)
-      print(mask.shape)
-      print(mask.unique())
-      break
     v = Visualizer(im[:, :, ::-1],
                    metadata=metadata, 
                    scale=0.8, 
@@ -53,11 +44,3 @@ def process_image(filename):
     v = v.draw_instance_predictions(outputs["instances"].to("cpu"))
     out_path = output_folder / filename.name
     cv2.imwrite(str(out_path), cv2.cvtColor(v.get_image()[:, :, ::-1], cv2.COLOR_BGR2RGB))
-
-
-if __name__ == '__main__':
-    for filename in input_folder.iterdir():
-        if filename.suffix != '.jpg' and filename.suffix != '.png':
-            continue
-        process_image(filename)
-        # process_image(str(filename))
