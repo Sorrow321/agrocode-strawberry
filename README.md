@@ -11,3 +11,6 @@
 
 Если что-то не получится, обращайтесь в телеграм @sorrow321
 
+<img src="https://sun9-37.userapi.com/impg/wDD2OpKn8cLepYbmislULu32d0f7JPQygMunJA/02_9aTpPfxQ.jpg?size=1280x566&quality=96&sign=6e5cde16753348860153258a6726c4ff&type=album" alt="drawing" width="800"/>
+
+<img src="https://sun9-83.userapi.com/impg/LVoiK3OxpmKR0INsVUrmONW3w0SMUZtYNN6Etg/7Hdd0rVsXtI.jpg?size=1280x561&quality=96&sign=2f2b0afe4dc84514387482fc9d1de4e5&type=album" alt="drawing" width="800"/>
