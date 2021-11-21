@@ -1,1 +1,0 @@
-Картинки для обучения тут: https://drive.google.com/file/d/1wjdTlPqshNtWABFWnt023iNrToRIGlzL/view
