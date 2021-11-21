@@ -1,0 +1,43 @@
+<html>
+<head>
+	<head>
+	    <link rel="stylesheet" href="./index.css">
+        <link rel="stylesheet" href="./modal.css">
+    </head>
+</head>
+<body>
+    <div id="modal" class="modal">
+      <div id="modal-inner" class="modal-inner">
+          <img id="modal-source-img"/>
+          <img id="modal-berries-img"/>
+          <img id="modal-leafs-img"/>
+      </div>
+    </div>
+    <header id="header">
+        <nav class="links" style="--items: 2;">
+            <a href="/">Upload files</a>
+            <a href="./history">History</a>
+            <span class="line"></span>
+        </nav>
+    </header>
+    {% for batch in folders %}
+    <div class="batch">
+        <h1 class="cards_title">Batch identifier: {{batch[0]}}</h1>
+        <div class="cards">
+            {% for file in batch[1] %}
+            <article class="card" id="{{batch[0] + '/' + file}}">
+                <header>
+                    <h2 class="filename">{{file}}</h2>
+                </header>
+                <img src="{{url_for('get_uploaded', path=batch[0] + '/' + file) }}" alt="Hot air balloons">
+                <div class="content">
+                    <p> The idea of reaching the North Pole by means of balloons appears to have been entertained many years ago. </p>
+                </div>
+                <footer>Click to see full info</footer>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+<script type="text/javascript" src="./modal.js"></script>
+</body>
