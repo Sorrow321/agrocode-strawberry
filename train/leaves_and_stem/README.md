@@ -16,12 +16,12 @@ nvidia-docker run --gpus all -it \
   --shm-size=8gb --env="DISPLAY" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
   --name=detectron2 detectron2:v0
 ```
-2.3 Нужно ключить контейнер. Для этого в терминале контейнера надо написать exit. После этого: docker ps -a. Выбрать CONTAINED ID для detectron2 и выключить его: docker rm -f CONTAINER_ID
+2.3 Нужно выключить контейнер. Для этого в терминале контейнера надо написать exit. После этого: docker ps -a. Выбрать CONTAINED ID для detectron2 и выключить его: docker rm -f CONTAINER_ID
 
-3. Скачанные данные расположите в данной директории, чтобы она выглядела примерно так:
-./data/file1.jpg
-./data/file2.png
-...
+3. Скачанные данные расположите в данной директории, чтобы она выглядела примерно так:<br>
+./data/file1.jpg<br>
+./data/file2.png<br>
+...<br>
 
 4. Запуск контейнера на обучение:
 4.1
