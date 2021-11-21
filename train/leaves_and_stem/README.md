@@ -3,7 +3,7 @@
 ## Инструкция по обучению и получению весов
 
 1. Скачайте данные для обучения по ссылке: https://drive.google.com/file/d/1JZZlvnvrO3wTu9C0hFAB8xzUxJMv_VLg/view?usp=sharing
-2. Соберите docker образ Detectron2. Если вы это уже делали, то шаг можно пропустить:
+2. Соберите docker образ Detectron2. Если вы это уже делали, то шаг можно пропустить:<br>
 2.1 Сборка.
 ```
 git clone https://github.com/facebookresearch/detectron2 
