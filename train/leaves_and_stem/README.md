@@ -37,17 +37,3 @@ cd /workspace
 python train.py
 ```
 5. Полученные веса будут лежать в папке output (под названием model_final.pth)
-
-
-
-2) git clone https://github.com/facebookresearch/detectron2
-3) cd detectron2/docker
-4) docker build --build-arg USER_ID=$UID -t detectron2:v0 .
-5) nvidia-docker run --gpus all -it \
-  --shm-size=8gb --env="DISPLAY" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
-  --name=detectron2 -v "$PWD":/workspace detectron2:v0
-6) cd /workspace
-7) pip install pandas
-7) python train.py
-
-После обучения веса будут лежать в ./output под названием model_final.pth.
