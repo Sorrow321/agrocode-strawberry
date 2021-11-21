@@ -23,7 +23,7 @@ nvidia-docker run --gpus all -it \
 ./data/file2.png<br>
 ...<br>
 
-4. Запуск контейнера на обучение:
+4. Запуск контейнера на обучение:<br>
 4.1
 ```
 nvidia-docker run --gpus all -it \
@@ -37,3 +37,4 @@ cd /workspace
 python train.py
 ```
 5. Полученные веса будут лежать в папке output (под названием model_final.pth)
+6. Не забыть выключить контейнер, как в пункте 2.3
